@@ -39,7 +39,6 @@ A full-stack real-time chat application built with **MERN**, **Socket.IO**, and 
 
 - ✅ Register/Login with JWT Authentication
 - 🔄 Real-time two-way messaging with Socket.IO
-- 👁️‍🗨️ Typing indicators while chatting
 - 👥 Online/Offline users presence tracking
 - 🎨 Supports 32+ UI Themes with DaisyUI (not just Light/Dark)
 - 📱 Fully responsive design for all devices
