@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 import path from "path";
-
+import axios from "axios";
 import { connectDB } from "./lib/db.js";
 
 import authRoutes from "./routes/auth.route.js";
@@ -40,3 +40,12 @@ server.listen(PORT, () => {
   console.log("server is running on PORT:" + PORT);
   connectDB();
 });
+
+ // ✅ Axios-based keep-alive ping to prevent Render sleeping
+setInterval(() => {
+  axios
+    .get("https://quickchat-ga6r.onrender.com")
+    .then(() => console.log(" Self pinged using Axios"))
+    .catch((err) => console.error(" Ping failed:", err.message));
+}, 1 * 60 * 1000); // Every 5 minutes 
+
